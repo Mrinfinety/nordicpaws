@@ -136,6 +136,28 @@ useEffect(() => {
     setTimeout(() => setToast(''), 2500);
   }
 
+  const renderGalleri = (cjIds: string[]) =>
+    cjIds
+      .map(id => products.find(p => p.cjId === id))
+      .filter((p): p is typeof products[0] => Boolean(p))
+      .map(p => (
+        <div
+          key={p.cjId}
+          className="content-gallery-item"
+          onClick={() => p.cjId && window.location.assign(`/produkt/${p.cjId}?pris=${p.price}&margin=${p.margin}`)}
+        >
+          <div className="content-gallery-img">
+            {p.cjId && cjProducts[p.cjId]
+              ? <img src={cjProducts[p.cjId].productImageSet?.[(p as any).bildIndex ?? 0] || cjProducts[p.cjId].bigImage} alt={lang === 'en' ? (p as any).nameEn : p.name} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              : <span>{p.emoji}</span>}
+          </div>
+          <div className="content-gallery-cap">
+            <div className="content-gallery-name">{lang === 'en' ? (p as any).nameEn : p.name}</div>
+            <div className="content-gallery-sub">{lang === 'en' ? (p as any).subEn : p.sub}</div>
+          </div>
+        </div>
+      ));
+
   return (
     <div style={{ fontFamily: "'DM Sans', sans-serif" }}>
       <style>{`
@@ -327,6 +349,38 @@ useEffect(() => {
         .trust-icon { font-size: 22px; margin-bottom: 4px; }
         .trust-title { font-size: 14px; font-weight: 500; color: #1a1a18; }
         .trust-text { font-size: 13px; color: #888; line-height: 1.6; font-weight: 300; }
+
+        .content-section { max-width: 860px; margin: 0 auto 72px; }
+        .content-h2 {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 32px; font-weight: 600; color: #1a1a18;
+          letter-spacing: -0.3px; margin-bottom: 20px;
+        }
+        .content-lead { font-size: 16px; color: #555; line-height: 1.85; font-weight: 300; margin-bottom: 16px; }
+        .content-block { margin-top: 44px; }
+        .content-h3 {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 23px; font-weight: 600; color: #1a1a18; margin-bottom: 12px;
+        }
+        .content-block p { font-size: 15px; color: #666; line-height: 1.85; font-weight: 300; }
+        .content-gallery {
+          display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 14px; margin-top: 22px;
+        }
+        .content-gallery-item {
+          border: 1px solid #e8e8e4; border-radius: 12px;
+          overflow: hidden; background: #fff; cursor: pointer;
+          transition: all 0.2s;
+        }
+        .content-gallery-item:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); border-color: #d4d4ce; }
+        .content-gallery-img {
+          height: 170px; background: #f7f7f5;
+          display: flex; align-items: center; justify-content: center;
+          font-size: 40px; overflow: hidden;
+        }
+        .content-gallery-cap { padding: 12px 14px; }
+        .content-gallery-name { font-size: 14px; font-weight: 500; color: #1a1a18; }
+        .content-gallery-sub { font-size: 12px; color: #888; line-height: 1.5; margin-top: 4px; }
 
         .footer {
           border-top: 1px solid #e8e8e4;
@@ -588,6 +642,44 @@ useEffect(() => {
             <div className="trust-text">{lang === 'en' ? 'Carefully selected products tested and approved by pet lovers worldwide.' : 'Nøye utvalgte produkter testet og godkjent av dyreelskere over hele verden.'}</div>
           </div>
         </div>
+
+        {/* Innholdsseksjon – kategori- og produktbeskrivelser for SEO og trygghet */}
+        <section className="content-section">
+          <h2 className="content-h2">{lang === 'en' ? 'Everything your pet needs — in one place' : 'Alt kjæledyret ditt trenger — på ett sted'}</h2>
+          <p className="content-lead">{lang === 'en'
+            ? 'At FjordFur you will find carefully selected pet supplies that make everyday life easier, safer and a little more enjoyable — both for you and for your four-legged family members. We test and choose every product for quality, function and safety, so you do not have to search through hundreds of mediocre alternatives. Whether you have an energetic puppy, a calm senior or a curious cat, we have products that cover the daily essentials: food and drink, grooming and hygiene, and practical gear for every walk.'
+            : 'Hos FjordFur finner du nøye utvalgt kjæledyrutstyr som gjør hverdagen enklere, tryggere og litt hyggeligere — både for deg og for de firbeinte familiemedlemmene. Vi tester og velger hvert produkt for kvalitet, funksjon og trygghet, slik at du slipper å lete gjennom hundrevis av middelmådige alternativer. Enten du har en energisk valp, en rolig senior eller en nysgjerrig katt, har vi produkter som dekker de daglige behovene: mat og drikke, stell og hygiene, og praktisk utstyr til tur.'}</p>
+          <p className="content-lead">{lang === 'en'
+            ? 'We know that pets are not just animals — they are family. That is why we focus on products that combine solid function with a clean, timeless design that fits right into your home. Use the categories above to find exactly what you are looking for, whether it is for your dog or your cat.'
+            : 'Vi vet at kjæledyr ikke bare er dyr — de er familie. Derfor legger vi vekt på produkter som kombinerer god funksjon med et rent, tidløst design som passer inn i hjemmet ditt. Bruk kategoriene over for å finne akkurat det du leter etter, enten det er til hund eller katt.'}</p>
+
+          <div className="content-block">
+            <h3 className="content-h3">{lang === 'en' ? 'For your dog' : 'Til hunden'}</h3>
+            <p>{lang === 'en'
+              ? 'Your dog is an active part of the family, and the right gear makes walks, meals and grooming safer. Our slow feeder bowl slows down the eating pace and prevents choking and bloating in eager eaters, while the leak-proof 2-in-1 water bottle gives your dog fresh water and snacks wherever the trail leads. With the discreet poop bag holder you always have bags ready — attached right to the leash. All products are made from durable, BPA-free materials that withstand daily use in all kinds of Norwegian weather.'
+              : 'Hunden er en aktiv del av familien, og riktig utstyr gjør både turer, måltider og stell tryggere. Vår sakte-fôrer skål bremser spisetempoet og forebygger kvelning og oppblåsthet hos ivrige slukere, mens den lekkasjesikre vannflasken 2-i-1 gir hunden frisk drikke og snacks uansett hvor turen går. Med den diskrete bæsjeposeholderen har du alltid poser for hånden — festet rett på båndet. Alle produktene er laget av slitesterke, BPA-frie materialer som tåler daglig bruk i all slags norsk vær.'}</p>
+            <div className="content-gallery">
+              {renderGalleri(['1653041912300969984', '2504100230321610200', '1767124394830204928'])}
+            </div>
+          </div>
+
+          <div className="content-block">
+            <h3 className="content-h3">{lang === 'en' ? 'For your cat' : 'Til katten'}</h3>
+            <p>{lang === 'en'
+              ? 'Cats are clean animals by nature, but their ears and teeth still need a little help from you. Our complete grooming set with disposable wipes makes it easy and gentle to remove ear wax, counteract ear mites and keep the teeth clean — with no water and no stress. Each wipe slips over your fingertip, giving you full control around sensitive areas. The same slow feeder bowl also suits cats that eat too fast, giving a calmer and healthier meal every day.'
+              : 'Katter er rene dyr av natur, men ører og tenner trenger litt hjelp fra deg. Vårt komplette stellesett med engangsservietter gjør det enkelt og skånsomt å fjerne ørevoks, motvirke øremidd og holde tennene rene — helt uten vann og stress. Servietten tres over fingertuppen, slik at du har full kontroll rundt sensitive områder. Den samme sakte-fôrer skålen passer også fint til katter som spiser for fort, og gir et roligere og sunnere måltid hver dag.'}</p>
+            <div className="content-gallery">
+              {renderGalleri(['2607180827191632000', '1653041912300969984'])}
+            </div>
+          </div>
+
+          <div className="content-block">
+            <h3 className="content-h3">{lang === 'en' ? 'Why choose FjordFur?' : 'Hvorfor velge FjordFur?'}</h3>
+            <p>{lang === 'en'
+              ? 'We want the shopping experience to be just as safe as our products. That is why we offer free shipping on all orders over NOK 499, tracked delivery straight to your door, and a full 14-day return policy — if you are not happy, we refund without complicated questions. Payment is always 100% secure. At FjordFur it is not about selling as much as possible, but about finding the right products that actually make life better for your pet. If you have any questions, we are just an email away at contact.fjordfur@gmail.com.'
+              : 'Vi vil at handleopplevelsen skal være like trygg som produktene våre. Derfor tilbyr vi gratis frakt på alle bestillinger over 499 kroner, sporbar levering rett hjem til døren, og hele 14 dagers angrerett — er du ikke fornøyd, refunderer vi uten kompliserte spørsmål. Betalingen er alltid 100 % sikker. Hos FjordFur handler det ikke om å selge mest mulig, men om å finne de riktige produktene som faktisk gjør livet bedre for kjæledyret ditt. Har du spørsmål, er vi bare en e-post unna på contact.fjordfur@gmail.com.'}</p>
+          </div>
+        </section>
       </div>
 
       {/* Footer */}
