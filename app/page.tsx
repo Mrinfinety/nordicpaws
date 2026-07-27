@@ -328,6 +328,31 @@ useEffect(() => {
         .trust-title { font-size: 14px; font-weight: 500; color: #1a1a18; }
         .trust-text { font-size: 13px; color: #888; line-height: 1.6; font-weight: 300; }
 
+        .seo { margin-bottom: 64px; }
+        .seo-h2 {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 30px; font-weight: 600; color: #1a1a18;
+          margin-bottom: 20px; letter-spacing: -0.3px;
+        }
+        .seo-h3 {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 22px; font-weight: 600; color: #1a1a18;
+          margin: 32px 0 12px;
+        }
+        .seo p {
+          font-size: 15px; color: #666; line-height: 1.85;
+          font-weight: 300; margin-bottom: 16px; max-width: 760px;
+        }
+        .seo a { color: #1D9E75; text-decoration: none; }
+        .seo a:hover { text-decoration: underline; }
+        .seo-cols {
+          display: grid; grid-template-columns: 1fr 1fr;
+          gap: 48px; margin-top: 8px;
+        }
+        .seo ul { margin: 0 0 16px 0; padding-left: 20px; max-width: 760px; }
+        .seo li { font-size: 15px; color: #666; line-height: 1.8; font-weight: 300; margin-bottom: 8px; }
+        .seo li strong { color: #1a1a18; font-weight: 500; }
+
         .footer {
           border-top: 1px solid #e8e8e4;
           padding: 40px 48px;
@@ -440,6 +465,9 @@ useEffect(() => {
           .card-img { height: 160px; }
 
           .trust-strip { grid-template-columns: 1fr; }
+
+          .seo-cols { grid-template-columns: 1fr; gap: 0; }
+          .seo-h2 { font-size: 26px; }
 
           .drawer { width: 100vw; border-left: none; padding: 24px 20px; }
 
@@ -588,6 +616,116 @@ useEffect(() => {
             <div className="trust-text">{lang === 'en' ? 'Carefully selected products tested and approved by pet lovers worldwide.' : 'Nøye utvalgte produkter testet og godkjent av dyreelskere over hele verden.'}</div>
           </div>
         </div>
+
+        {/* Innholdsseksjon / SEO */}
+        {lang === 'en' ? (
+          <section className="seo">
+            <h2 className="seo-h2">High-quality pet supplies — carefully selected for dogs and cats</h2>
+            <p>
+              FjordFur is the online shop for pet owners who want to give their dog or cat a safer, healthier and happier
+              everyday life. We hand-pick every single product based on quality, animal welfare and real usefulness — not
+              just price. Everything we sell is something we would happily use for our own pets. With free shipping over
+              NOK 499, a 14-day return policy and tracked delivery straight to your door, shopping with us is meant to be
+              both safe and simple.
+            </p>
+
+            <div className="seo-cols">
+              <div>
+                <h3 className="seo-h3">For your dog</h3>
+                <p>
+                  Whether you are heading out for long walks in the forest and mountains or relaxing at home, you will
+                  find practical gear that makes daily life easier. Does your dog eat far too quickly? A{' '}
+                  <a href="/produkt/1653041912300969984?pris=149&margin=132">slow feeder bowl</a> slows down the eating
+                  pace and helps prevent choking and bloating. Going on a trip? A{' '}
+                  <a href="/produkt/2504100230321610200?pris=249&margin=120">2-in-1 water bottle</a> with a built-in food
+                  container is worth its weight in gold, and a{' '}
+                  <a href="/produkt/1767124394830204928?pris=169&margin=79">poop bag holder</a> keeps waste bags ready on
+                  the leash at all times. Want more tips? Read our guides on the{' '}
+                  <a href="/blogg/pakkeliste-til-hundeturen">dog walk packing list</a> and{' '}
+                  <a href="/blogg/hvorfor-spiser-hunden-for-fort">why your dog eats too fast</a>.
+                </p>
+              </div>
+              <div>
+                <h3 className="seo-h3">For your cat</h3>
+                <p>
+                  Cats are clean animals, but they still need a helping hand now and then. Our{' '}
+                  <a href="/produkt/2607180827191632000?pris=199&margin=122">grooming set for ears and teeth</a> makes it
+                  easy and gentle to keep teeth clean and ears healthy between vet visits — completely without water and
+                  stress. Good dental health and clean ears help prevent bad odour, plaque and ear mites, so your cat
+                  stays comfortable and content.
+                </p>
+              </div>
+            </div>
+
+            <h3 className="seo-h3">Why shop at FjordFur?</h3>
+            <ul>
+              <li><strong>Carefully selected products</strong> — we test and approve everything ourselves, with animal welfare in focus.</li>
+              <li><strong>Free shipping over NOK 499</strong> — tracked delivery straight to your door.</li>
+              <li><strong>14-day return policy</strong> — not happy? You get your money back, no questions asked.</li>
+              <li><strong>Secure payment</strong> — safe card payment and full overview of your order.</li>
+            </ul>
+            <p>
+              Not sure what your pet needs? <a href="/om-oss">Learn more about us</a> and the philosophy behind the shop,
+              or visit our <a href="/blogg">blog</a> for advice and guides for pet owners. To learn more about animal
+              health and responsible pet ownership, we recommend the resources from{' '}
+              <a href="https://www.mattilsynet.no/dyr/kjaledyr" target="_blank" rel="noopener noreferrer">the Norwegian Food Safety Authority</a>{' '}
+              and <a href="https://www.nkk.no" target="_blank" rel="noopener noreferrer">the Norwegian Kennel Club</a>.
+            </p>
+          </section>
+        ) : (
+          <section className="seo">
+            <h2 className="seo-h2">Kjæledyrutstyr av høy kvalitet — nøye utvalgt for hund og katt</h2>
+            <p>
+              FjordFur er nettbutikken for deg som vil gi hunden eller katten en tryggere, sunnere og gladere hverdag. Vi
+              håndplukker hvert eneste produkt ut fra kvalitet, dyrevelferd og reell nytte — ikke bare pris. Alt vi selger
+              er noe vi selv ville brukt på våre egne dyr. Med gratis frakt over 499 kr, 14 dagers angrerett og sporbar
+              levering rett hjem til deg, skal det være både trygt og enkelt å handle hos oss.
+            </p>
+
+            <div className="seo-cols">
+              <div>
+                <h3 className="seo-h3">Til hunden</h3>
+                <p>
+                  Enten dere er på lange turer i skog og fjell eller koser dere hjemme, finner du praktisk utstyr som gjør
+                  hverdagen enklere. Spiser hunden altfor fort? En{' '}
+                  <a href="/produkt/1653041912300969984?pris=149&margin=132">sakte-fôr skål</a> bremser spisetempoet og
+                  forebygger kvelning og oppblåsthet. Skal dere ut på tur? Da er en{' '}
+                  <a href="/produkt/2504100230321610200?pris=249&margin=120">vannflaske 2-i-1</a> med innebygd
+                  matbeholder gull verdt, og en{' '}
+                  <a href="/produkt/1767124394830204928?pris=169&margin=79">bæsjeposeholder</a> sørger for at posene alltid
+                  henger klare på båndet. Vil du ha flere tips? Les guidene våre om{' '}
+                  <a href="/blogg/pakkeliste-til-hundeturen">pakkeliste til hundeturen</a> og{' '}
+                  <a href="/blogg/hvorfor-spiser-hunden-for-fort">hvorfor hunden spiser for fort</a>.
+                </p>
+              </div>
+              <div>
+                <h3 className="seo-h3">Til katten</h3>
+                <p>
+                  Katter er rene dyr, men trenger litt hjelp innimellom. Vårt{' '}
+                  <a href="/produkt/2607180827191632000?pris=199&margin=122">stellesett for øre og tenner</a> gjør det
+                  enkelt og skånsomt å holde tennene rene og ørene friske mellom besøk hos veterinæren — helt uten vann og
+                  stress. God tannhelse og rene ører forebygger både vond lukt, plakk og øremidd, slik at katten holder seg
+                  frisk og fornøyd.
+                </p>
+              </div>
+            </div>
+
+            <h3 className="seo-h3">Hvorfor handle hos FjordFur?</h3>
+            <ul>
+              <li><strong>Nøye utvalgte produkter</strong> — vi tester og godkjenner alt selv, med dyrevelferd i fokus.</li>
+              <li><strong>Gratis frakt over 499 kr</strong> — sporbar levering rett hjem til deg.</li>
+              <li><strong>14 dagers angrerett</strong> — ikke fornøyd? Du får pengene tilbake, uten spørsmål.</li>
+              <li><strong>Trygg betaling</strong> — sikker kortbetaling og full oversikt over bestillingen.</li>
+            </ul>
+            <p>
+              Er du usikker på hva kjæledyret ditt trenger? <a href="/om-oss">Les mer om oss</a> og filosofien bak
+              butikken, eller besøk <a href="/blogg">bloggen vår</a> for råd og guider skrevet for norske dyreeiere. Vil du
+              lære mer om dyrehelse og ansvarlig dyrehold, anbefaler vi ressursene til{' '}
+              <a href="https://www.mattilsynet.no/dyr/kjaledyr" target="_blank" rel="noopener noreferrer">Mattilsynet</a>{' '}
+              og <a href="https://www.nkk.no" target="_blank" rel="noopener noreferrer">Norsk Kennel Klub</a>.
+            </p>
+          </section>
+        )}
       </div>
 
       {/* Footer */}
