@@ -93,6 +93,21 @@ export const PRODUKTER: ProduktKonfig[] = [
     metaTittel: 'Stellesett til Katt & Hund – Servietter for Øre, Tenner & Øremidd',
     metaBeskrivelse: 'Komplett stellesett med engangsservietter til katt og hund: tannrens, ørepleie og øremiddfjerning. Trekkes over fingertuppen, fjerner ørevoks og plakk. Fri frakt over 499 kr.',
   },
+  {
+    cjId: '2607280729331630600',
+    navn: 'Vidbukse med Hundebroderi',
+    navnEn: 'Dog Embroidery Wide-leg Pants',
+    sub: 'Behagelig vidbukse for dame med hundemotiv',
+    subEn: 'Comfy wide-leg pants for women with dog motif',
+    pris: 319,
+    margin: 193,
+    emoji: '👖',
+    cat: 'hund',
+    beskrivelse: 'En vidbukse for dame med et lite, sjarmerende broderi av en hund i bånd — den perfekte buksa for deg som elsker hunder og setter komfort høyt. Det ledige, vide snittet gir bevegelsesfrihet og en luftig følelse, samtidig som det myke stoffet faller pent og kler de fleste kroppsfasonger. Det delikate hundemotivet gir buksa et personlig og lekent preg uten å bli for mye, slik at den lett kan styles både til hverdags og til litt finere anledninger. Bruk den til turer i parken, en avslappet kaffedate eller en rolig dag hjemme — dette er buksa du strekker deg etter igjen og igjen. En stilren gave til hundeeieren som vil vise kjærligheten til firbeinte venner gjennom garderoben.',
+    beskrivelseEn: 'Wide-leg pants for women featuring a small, charming embroidery of a leashed dog — the perfect trousers for anyone who loves dogs and values comfort. The relaxed, wide cut gives freedom of movement and an airy feel, while the soft fabric drapes beautifully and flatters most body shapes. The delicate dog motif adds a personal and playful touch without being overwhelming, making the pants easy to style for both everyday wear and slightly dressier occasions. Wear them for walks in the park, a relaxed coffee date or a calm day at home — these are the pants you will reach for again and again. A stylish gift for the dog owner who wants to show their love for four-legged friends through their wardrobe.',
+    metaTittel: 'Vidbukse med Hundebroderi til Dame – Behagelig & Stilren',
+    metaBeskrivelse: 'Behagelig vidbukse for dame med sjarmerende hundebroderi. Luftig, vidt snitt i mykt stoff – perfekt til hverdag og fest for hundeelskere. Fri frakt over 499 kr.',
+  },
 ];
 
 export function hentRelaterte(cjId: string) {
