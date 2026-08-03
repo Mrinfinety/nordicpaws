@@ -328,6 +328,18 @@ useEffect(() => {
         .trust-title { font-size: 14px; font-weight: 500; color: #1a1a18; }
         .trust-text { font-size: 13px; color: #888; line-height: 1.6; font-weight: 300; }
 
+        .seo-content { max-width: 760px; margin: 0 auto 40px; }
+        .seo-content h2 {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 28px; font-weight: 600; color: #1a1a18;
+          margin-bottom: 20px;
+        }
+        .seo-content p {
+          font-size: 14px; color: #777; line-height: 1.8;
+          margin-bottom: 16px; font-weight: 300;
+        }
+        .seo-content p:last-child { margin-bottom: 0; }
+
         .footer {
           border-top: 1px solid #e8e8e4;
           padding: 40px 48px;
@@ -587,6 +599,27 @@ useEffect(() => {
             <div className="trust-title">{lang === 'en' ? 'Loved by pets' : 'Elsket av kjæledyr'}</div>
             <div className="trust-text">{lang === 'en' ? 'Carefully selected products tested and approved by pet lovers worldwide.' : 'Nøye utvalgte produkter testet og godkjent av dyreelskere over hele verden.'}</div>
           </div>
+        </div>
+
+        {/* SEO-innhold: produkt- og kategoribeskrivelser + verdiløfter */}
+        <div className="seo-content">
+          {lang === 'en' ? (
+            <>
+              <h2>Everything your pet needs, carefully selected</h2>
+              <p>At FjordFur you&apos;ll find carefully selected pet supplies for both dogs and cats — products we would happily use on our own four-legged family members. We believe that small, thoughtful details in everyday life make a big difference to your pet&apos;s well-being, whether it&apos;s about meals, walks or daily grooming. That&apos;s why we choose every product with quality, safety and real usefulness in mind.</p>
+              <p>For dogs we offer everything from a slow feeder bowl that slows down eating pace and prevents choking and bloating, to a practical 2-in-1 water bottle with a built-in food container that gives your dog fresh water wherever the trail leads. Our discreet poop bag holder attaches easily to the leash, so you always have bags at hand. Together these products make everyday walks and meals safer, tidier and more comfortable — for both you and your dog.</p>
+              <p>For cats — and dogs — we offer a complete grooming set with disposable wipes for ears, teeth and ear mites. With wipes that slip right over your fingertip, you get gentle control when cleaning ears, removing ear wax and brushing teeth between visits to the vet. Good dental health and clean ears are a simple but important part of a long and healthy pet life.</p>
+              <p>When you shop with us you get free shipping on all orders over NOK 499, tracked delivery straight to your door and a 14-day return policy. Not happy? We refund without questions. Every product is selected and approved by pet lovers, and we&apos;re here to help you give your pet a better and happier everyday life.</p>
+            </>
+          ) : (
+            <>
+              <h2>Alt kjæledyret ditt trenger, nøye utvalgt</h2>
+              <p>Hos FjordFur finner du nøye utvalgt kjæledyrutstyr til både hund og katt — produkter vi selv ville brukt på våre egne firbente familiemedlemmer. Vi tror at små, gjennomtenkte detaljer i hverdagen gjør stor forskjell for trivselen til kjæledyret ditt, enten det handler om måltider, turer eller daglig stell. Derfor plukker vi ut hvert produkt med tanke på kvalitet, sikkerhet og reell nytte.</p>
+              <p>Til hunden har vi alt fra en sakte fôrer skål som bremser spisetempoet og forhindrer kvelning og oppblåsthet, til en praktisk 2-i-1 vannflaske med innebygd matbeholder som gir hunden frisk drikke uansett hvor turen går. Vår diskrete bæsjeposeholder festes enkelt til båndet, slik at du alltid har poser for hånden. Sammen gjør disse produktene hverdagsturer og måltider tryggere, ryddigere og mer behagelige — for både deg og hunden.</p>
+              <p>Til katten – og hunden – tilbyr vi et komplett stellesett med engangsservietter for øre, tenner og øremidd. Med servietter som tres rett over fingertuppen får du skånsom kontroll når du renser ører, fjerner ørevoks og pusser tenner mellom besøk hos veterinær. God tannhelse og rene ører er en enkel, men viktig del av et langt og friskt kjæledyrliv.</p>
+              <p>Når du handler hos oss får du gratis frakt på alle ordrer over 499 kr, sporbar levering rett hjem til døren og 14 dagers angrerett. Er du ikke fornøyd, refunderer vi uten spørsmål. Alle produktene er valgt ut og godkjent av dyreelskere, og vi er her for å hjelpe deg med å gi kjæledyret ditt en bedre og gladere hverdag.</p>
+            </>
+          )}
         </div>
       </div>
 
