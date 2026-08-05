@@ -93,6 +93,21 @@ export const PRODUKTER: ProduktKonfig[] = [
     metaTittel: 'Stellesett til Katt & Hund – Servietter for Øre, Tenner & Øremidd',
     metaBeskrivelse: 'Komplett stellesett med engangsservietter til katt og hund: tannrens, ørepleie og øremiddfjerning. Trekkes over fingertuppen, fjerner ørevoks og plakk. Fri frakt over 499 kr.',
   },
+  {
+    cjId: '2608040730431611800',
+    navn: 'Kobberring Pølsehund',
+    navnEn: 'Eco-friendly Copper Sausage Dog Ring',
+    sub: 'Miljøvennlig kobber – for hundeelskere',
+    subEn: 'Eco-friendly copper – for dog lovers',
+    pris: 149,
+    margin: 141,
+    emoji: '🐕',
+    cat: 'hund',
+    beskrivelse: 'Er du – eller noen du er glad i – helt vill etter pølsehunder? Denne miljøvennlige kobberringen er formet som en sjarmerende pølsehund (dachshund) og er den perfekte lille detaljen for enhver hundeelsker. Ringen er laget av miljøvennlig kobber som gir en varm, tidløs glød og et fint håndverkspreg. Den er behagelig å bære hele dagen, tåler daglig bruk og passer like godt til hverdagsantrekket som til en spesiell anledning. En kobberring med pølsehund-motiv er også en fin og personlig gave til hundeeieren som har alt — til bursdag, jul eller bare fordi. Det stilrene, minimalistiske designet gjør at den matcher det meste, samtidig som det lille hundemotivet skaper et hyggelig samtaleemne. Vis frem kjærligheten til firbeinte venner med et smykke som er både bærekraftig og fullt av personlighet.',
+    beskrivelseEn: 'Are you — or someone you love — completely obsessed with sausage dogs? This eco-friendly copper ring is shaped like a charming dachshund and makes the perfect little detail for any dog lover. The ring is crafted from eco-friendly copper that gives a warm, timeless glow and a lovely handcrafted feel. It is comfortable to wear all day, holds up to everyday use and works just as well with a casual outfit as with a special occasion. A copper ring with a sausage dog motif is also a lovely, personal gift for the dog owner who has everything — for a birthday, Christmas or just because. The sleek, minimalist design pairs with almost anything, while the little dog motif sparks a friendly conversation. Show off your love for four-legged friends with a piece of jewellery that is both sustainable and full of personality.',
+    metaTittel: 'Kobberring Pølsehund – Miljøvennlig Smykke til Hundeelskere',
+    metaBeskrivelse: 'Miljøvennlig kobberring formet som en pølsehund (dachshund) – et stilrent og bærekraftig smykke og en fin gave til hundeelskere. Håndverkspreg og tidløst design. Fri frakt over 499 kr.',
+  },
 ];
 
 export function hentRelaterte(cjId: string) {
