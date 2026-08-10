@@ -121,7 +121,8 @@ export default function ProduktSide() {
   const { lang, setLang } = useLanguage();
   const { id } = useParams();
   const searchParams = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '');
-  const fastPris = parseInt(searchParams.get('pris') || '0');
+  const konfigPris = PRODUKTER.find(p => p.cjId === id)?.pris ?? 0;
+  const fastPris = parseInt(searchParams.get('pris') || '0') || konfigPris;
   const margin = parseInt(searchParams.get('margin') || '15');
   const [produkt, setProdukt] = useState<any>(null);
   const [valgtVariant, setValgtVariant] = useState<any>(null);
