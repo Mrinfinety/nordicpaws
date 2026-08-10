@@ -328,6 +328,16 @@ useEffect(() => {
         .trust-title { font-size: 14px; font-weight: 500; color: #1a1a18; }
         .trust-text { font-size: 13px; color: #888; line-height: 1.6; font-weight: 300; }
 
+        .seo-content { max-width: 760px; margin: 0 auto 64px; }
+        .seo-content h2 {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 28px; font-weight: 600; color: #1a1a18; margin-bottom: 20px;
+        }
+        .seo-content h3 { font-size: 16px; font-weight: 500; color: #1a1a18; margin: 28px 0 10px; }
+        .seo-content p { font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 14px; font-weight: 300; }
+        .seo-content a { color: #1D9E75; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; cursor: pointer; }
+        .seo-content a:hover { border-bottom-color: #1D9E75; }
+
         .footer {
           border-top: 1px solid #e8e8e4;
           padding: 40px 48px;
@@ -588,6 +598,106 @@ useEffect(() => {
             <div className="trust-text">{lang === 'en' ? 'Carefully selected products tested and approved by pet lovers worldwide.' : 'Nøye utvalgte produkter testet og godkjent av dyreelskere over hele verden.'}</div>
           </div>
         </div>
+
+        {/* SEO-innhold */}
+        <section className="seo-content">
+          {lang === 'en' ? (
+            <>
+              <h2>Quality supplies for dogs and cats — carefully selected</h2>
+              <p>
+                FjordFur is the online store for anyone who wants to give their dog or cat the very best in
+                everyday life. We stock a carefully selected range across two main categories —{' '}
+                <a href="#produkter" onClick={() => setAktivKat('hund')}>supplies for dogs</a> and{' '}
+                <a href="#produkter" onClick={() => setAktivKat('katt')}>products for cats</a> — and instead of
+                filling our shelves with random items, we hand-pick products that actually make a difference.
+                Whether it is about healthier meals, safer walks or easier grooming, you get quality that lasts.
+                Every order ships with tracked delivery, and you get free shipping on everything over NOK 499.
+              </p>
+              <h3>Everything for the dog owner</h3>
+              <p>
+                For dogs we have several favourites. The popular{' '}
+                <a href="/produkt/1653041912300969984?pris=149&margin=132">slow feeder bowl</a> slows down eating
+                pace and helps prevent choking, bloating and digestive issues in eager eaters — feel free to read
+                why <a href="/blogg/hvorfor-spiser-hunden-for-fort">dogs eat too fast</a> before you decide. Heading
+                out on a trip? The{' '}
+                <a href="/produkt/2504100230321610200?pris=249&margin=120">2-in-1 water bottle</a> with a built-in
+                drinking cup and food container is a smart companion that keeps your dog hydrated in any weather,
+                while the practical{' '}
+                <a href="/produkt/1767124394830204928?pris=169&margin=79">poop bag holder</a> makes sure you always
+                have bags within reach. Need help planning the walk? See our complete{' '}
+                <a href="/blogg/pakkeliste-til-hundeturen">dog trip packing list</a> with everything from water and
+                snacks to safety and first aid.
+              </p>
+              <h3>Grooming and care for cats and dogs</h3>
+              <p>
+                Good care is an important part of animal health, and our{' '}
+                <a href="/produkt/2607180827191632000?pris=199&margin=122">grooming set for ears and teeth</a> makes
+                the daily routine both easy and gentle. The soft disposable wipes effectively remove ear wax, food
+                residue and plaque — without water or stress — and help give fresher breath and cleaner ears.
+                Regular grooming prevents both bad odour and ear mites. Want to learn more about responsible pet
+                ownership? The AVMA offers{' '}
+                <a href="https://www.avma.org/resources-tools/pet-owners" target="_blank" rel="noopener noreferrer">helpful advice on pet care</a>{' '}
+                that is well worth reading.
+              </p>
+              <h3>Safe shopping from start to finish</h3>
+              <p>
+                At FjordFur, the shopping experience should feel safe all the way. We offer 100% secure payment, a
+                14-day right of withdrawal and easy <a href="/retur">returns and refunds</a> if something does not
+                fit. Already placed an order? You can <a href="/sporing">track your parcel</a> at any time. Want to
+                know more about who we are and why we started the store? Read more{' '}
+                <a href="/om-oss">about us</a> — or drop by <a href="/blogg">our blog</a> for more tips and
+                inspiration for the good life with dogs and cats.
+              </p>
+            </>
+          ) : (
+            <>
+              <h2>Kvalitetsutstyr til hund og katt – nøye utvalgt</h2>
+              <p>
+                FjordFur er nettbutikken for deg som vil gi hunden eller katten det aller beste i hverdagen. Vi
+                fører et nøye utvalgt sortiment fordelt på to hovedkategorier –{' '}
+                <a href="#produkter" onClick={() => setAktivKat('hund')}>utstyr til hund</a> og{' '}
+                <a href="#produkter" onClick={() => setAktivKat('katt')}>produkter til katt</a> – og i stedet for å
+                fylle hyllene med tilfeldige varer, håndplukker vi produkter som faktisk gjør en forskjell. Enten
+                det handler om sunnere måltider, tryggere turer eller enklere stell, får du kvalitet som varer. Alle
+                bestillinger sendes med sporbar frakt, og du får gratis frakt på alt over 499 kroner.
+              </p>
+              <h3>Alt til hundeeieren</h3>
+              <p>
+                Til hunden har vi flere favoritter. Den populære{' '}
+                <a href="/produkt/1653041912300969984?pris=149&margin=132">Sakte-fôrer skålen</a> bremser
+                spisetempoet og forebygger kvelning, oppblåsthet og fordøyelsesproblemer hos ivrige slukere – les
+                gjerne hvorfor <a href="/blogg/hvorfor-spiser-hunden-for-fort">hunden spiser for fort</a> før du
+                bestemmer deg. Skal dere ut på tur, er{' '}
+                <a href="/produkt/2504100230321610200?pris=249&margin=120">vannflasken 2-i-1</a> med innebygd
+                drikkekopp og matbeholder en smart følgesvenn som holder hunden hydrert uansett vær, mens den
+                praktiske <a href="/produkt/1767124394830204928?pris=169&margin=79">bæsjeposeholderen</a> sørger for
+                at du alltid har poser for hånden. Trenger du hjelp til å planlegge turen? Se vår komplette{' '}
+                <a href="/blogg/pakkeliste-til-hundeturen">pakkeliste til hundeturen</a> med alt fra vann og snacks
+                til sikkerhet og førstehjelp.
+              </p>
+              <h3>Stell og pleie til katt og hund</h3>
+              <p>
+                God pleie er en viktig del av dyrehelsen, og med vårt{' '}
+                <a href="/produkt/2607180827191632000?pris=199&margin=122">stellesett for ører og tenner</a> blir
+                den daglige rutinen både enkel og skånsom. De myke engangsservettene fjerner effektivt ørevoks,
+                matrester og plakk – helt uten vann og stress – og bidrar til friskere ånde og renere ører.
+                Regelmessig stell forebygger både vond lukt og øremidd. Vil du lære mer om ansvarlig dyrehold, gir
+                Mattilsynet{' '}
+                <a href="https://www.mattilsynet.no/dyr-og-dyrehold" target="_blank" rel="noopener noreferrer">gode råd om dyrevelferd</a>{' '}
+                som er verdt å lese.
+              </p>
+              <h3>Trygg handel fra start til slutt</h3>
+              <p>
+                Hos FjordFur skal handleopplevelsen føles trygg hele veien. Vi tilbyr 100 % sikker betaling, 14
+                dagers angrerett og enkel <a href="/retur">retur og refusjon</a> dersom noe ikke skulle passe. Har
+                du allerede bestilt, kan du når som helst følge pakken via{' '}
+                <a href="/sporing">sporing av bestilling</a>. Vil du vite mer om hvem vi er og hvorfor vi startet
+                nettbutikken, kan du lese mer <a href="/om-oss">om oss</a> – eller stikke innom{' '}
+                <a href="/blogg">bloggen vår</a> for flere tips og inspirasjon til det gode livet med hund og katt.
+              </p>
+            </>
+          )}
+        </section>
       </div>
 
       {/* Footer */}
