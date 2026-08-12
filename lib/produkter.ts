@@ -93,6 +93,21 @@ export const PRODUKTER: ProduktKonfig[] = [
     metaTittel: 'Stellesett til Katt & Hund – Servietter for Øre, Tenner & Øremidd',
     metaBeskrivelse: 'Komplett stellesett med engangsservietter til katt og hund: tannrens, ørepleie og øremiddfjerning. Trekkes over fingertuppen, fjerner ørevoks og plakk. Fri frakt over 499 kr.',
   },
+  {
+    cjId: '2087110614528090113',
+    navn: 'Redningsvest til Hund',
+    navnEn: 'Dog Life Jacket',
+    sub: 'Flytevest med redningshåndtak, str. S–L',
+    subEn: 'Flotation vest with rescue handle, size S–L',
+    pris: 309,
+    margin: 188,
+    emoji: '🦺',
+    cat: 'hund',
+    beskrivelse: 'Skal hunden din være med i båten, på stranda eller i vannet i sommer? Denne redningsvesten til hund gir ekstra trygghet slik at bading og båtturer blir gøy for både deg og firbeinten. Vesten er fylt med flyteskum som holder hunden stabilt oppe i vannet, og de morsomme haidesignet gjør den ekstra søt å se på. Det solide redningshåndtaket på ryggen gjør at du raskt og enkelt kan løfte hunden opp av vannet eller inn i båten hvis det trengs. De justerbare stroppene rundt mage og bryst gir en trygg og komfortabel passform, og de reflekterende detaljene gir god synlighet også når lyset er dårlig. Flytevesten finnes i flere størrelser for små, mellomstore og store hunder, slik at du enkelt finner riktig passform. Perfekt for svømming, båtliv, stranddager og alle vannaktiviteter der sikkerheten kommer først.',
+    beskrivelseEn: 'Is your dog joining you in the boat, at the beach or in the water this summer? This dog life jacket adds extra safety so swimming and boating become fun for both you and your four-legged friend. The vest is filled with buoyant foam that keeps your dog stable and afloat, and the fun shark design makes it extra cute to look at. The sturdy rescue handle on the back lets you quickly and easily lift your dog out of the water or into the boat when needed. The adjustable straps around the belly and chest give a secure and comfortable fit, and the reflective details provide good visibility even in low light. The flotation vest comes in several sizes for small, medium and large dogs, so you can easily find the right fit. Perfect for swimming, boating, beach days and any water activity where safety comes first.',
+    metaTittel: 'Redningsvest til Hund – Flytevest med Redningshåndtak',
+    metaBeskrivelse: 'Redningsvest til hund med flyteskum, redningshåndtak og justerbare stropper. Reflekterende flytevest for svømming, båt og strand. Str. S–L. Fri frakt over 499 kr.',
+  },
 ];
 
 export function hentRelaterte(cjId: string) {
