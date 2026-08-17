@@ -328,6 +328,24 @@ useEffect(() => {
         .trust-title { font-size: 14px; font-weight: 500; color: #1a1a18; }
         .trust-text { font-size: 13px; color: #888; line-height: 1.6; font-weight: 300; }
 
+        .seo-content { max-width: 760px; margin: 0 auto 64px; }
+        .seo-content h2 {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 28px; font-weight: 600; color: #1a1a18;
+          margin-bottom: 20px;
+        }
+        .seo-content h3 {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 20px; font-weight: 600; color: #1a1a18;
+          margin: 28px 0 10px;
+        }
+        .seo-content p {
+          font-size: 15px; color: #555; line-height: 1.8;
+          font-weight: 300; margin-bottom: 14px;
+        }
+        .seo-content a { color: #1D9E75; text-decoration: none; }
+        .seo-content a:hover { text-decoration: underline; }
+
         .footer {
           border-top: 1px solid #e8e8e4;
           padding: 40px 48px;
@@ -588,6 +606,95 @@ useEffect(() => {
             <div className="trust-text">{lang === 'en' ? 'Carefully selected products tested and approved by pet lovers worldwide.' : 'Nøye utvalgte produkter testet og godkjent av dyreelskere over hele verden.'}</div>
           </div>
         </div>
+
+        {/* SEO-innhold */}
+        {(() => {
+          const prodHref = (i: number) => `/produkt/${products[i].cjId}?pris=${products[i].price}&margin=${products[i].margin}`;
+          return lang === 'en' ? (
+            <section className="seo-content">
+              <h2>Carefully selected pet supplies for dogs and cats</h2>
+              <p>
+                At FjordFur you will find hand-picked pet supplies for both dogs and cats —
+                products we have tested and chosen because they genuinely make everyday life
+                easier. We believe good pet gear should be simple, safe and affordable, which is
+                why we offer <a href="/retur">free shipping over NOK 499 and a 14-day return
+                policy</a> to make shopping worry-free. Whether you are looking for smart feeding,
+                practical outdoor gear or gentle grooming, we help you take better care of the
+                four-legged member of your family.
+              </p>
+
+              <h3>Gear for dogs</h3>
+              <p>
+                Does your dog wolf down its food? A <a href={prodHref(0)}>slow feeder bowl</a> slows
+                the eating pace and helps prevent bloating and choking. Heading outdoors? A{' '}
+                <a href={prodHref(1)}>2-in-1 water bottle</a> makes it easy to keep your dog
+                hydrated without spills, while a <a href={prodHref(2)}>poop bag holder</a> on the
+                leash keeps waste bags always within reach. Not sure what to bring along? Read our{' '}
+                <a href="/blogg/pakkeliste-til-hundeturen">packing list for the dog walk</a> for a
+                complete overview.
+              </p>
+
+              <h3>Gear for cats</h3>
+              <p>
+                Good grooming is important for your cat&apos;s health. Our{' '}
+                <a href={prodHref(3)}>grooming set with wipes for ears, teeth and ear mites</a>{' '}
+                makes daily care easy, gentle and completely water-free — perfect between visits to
+                the vet. Several of our products, such as the slow feeder bowl, suit cats just as
+                well as dogs.
+              </p>
+
+              <h3>Why shop at FjordFur?</h3>
+              <p>
+                We keep our range small and considered rather than large and random. Every product
+                is chosen for quality, safety and real usefulness, and we ship tracked straight to
+                your door. Get to know us better on <a href="/om-oss">About us</a>, or read more
+                tips on <a href="/blogg">our blog</a> — for example about{' '}
+                <a href="/blogg/hvorfor-spiser-hunden-for-fort">why your dog eats too fast</a>.
+              </p>
+            </section>
+          ) : (
+            <section className="seo-content">
+              <h2>Nøye utvalgt kjæledyrutstyr til hund og katt</h2>
+              <p>
+                Hos FjordFur finner du nøye utvalgt kjæledyrutstyr til både hund og katt — produkter
+                vi har testet og valgt fordi de faktisk gjør hverdagen enklere. Vi mener at godt
+                utstyr skal være enkelt, trygt og prisvennlig, og derfor tilbyr vi{' '}
+                <a href="/retur">gratis frakt over 499 kr og 14 dagers angrerett</a> slik at det er
+                trygt å handle. Enten du leter etter smart fôring, praktisk turutstyr eller
+                skånsomt stell, hjelper vi deg med å ta godt vare på den firbeinte i familien.
+              </p>
+
+              <h3>Utstyr til hund</h3>
+              <p>
+                Har du en ivrig sluker? En <a href={prodHref(0)}>sakte fôrer skål</a> bremser
+                spisetempoet og forebygger oppblåsthet og kvelning. Skal dere på tur, gjør en{' '}
+                <a href={prodHref(1)}>2-i-1 vannflaske</a> det enkelt å holde hunden hydrert uten
+                søl, mens en <a href={prodHref(2)}>bæsjeposeholder</a> på båndet sørger for at
+                posene alltid er for hånden. Usikker på hva du bør ha med? Les vår{' '}
+                <a href="/blogg/pakkeliste-til-hundeturen">pakkeliste til hundeturen</a> for en
+                komplett oversikt.
+              </p>
+
+              <h3>Utstyr til katt</h3>
+              <p>
+                For kattens helse er godt stell viktig. Vårt{' '}
+                <a href={prodHref(3)}>stellesett med servietter til øre, tenner og øremidd</a> gjør
+                daglig pleie enkelt, skånsomt og helt uten vann — perfekt mellom besøk hos
+                veterinær. Flere av produktene våre, som sakte fôrer skålen, passer like godt for
+                katt som for hund.
+              </p>
+
+              <h3>Hvorfor handle hos FjordFur?</h3>
+              <p>
+                Vi holder sortimentet lite og gjennomtenkt fremfor stort og tilfeldig. Alle
+                produkter er valgt for kvalitet, sikkerhet og reell nytteverdi, og vi sender
+                sporbart rett hjem til deg. Bli bedre kjent med oss på <a href="/om-oss">Om oss</a>,
+                eller les flere tips på <a href="/blogg">bloggen vår</a> — for eksempel om{' '}
+                <a href="/blogg/hvorfor-spiser-hunden-for-fort">hvorfor hunden spiser for fort</a>.
+              </p>
+            </section>
+          );
+        })()}
       </div>
 
       {/* Footer */}
