@@ -121,7 +121,9 @@ export default function ProduktSide() {
   const { lang, setLang } = useLanguage();
   const { id } = useParams();
   const searchParams = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '');
-  const fastPris = parseInt(searchParams.get('pris') || '0');
+  // Fall tilbake til prisen fra PRODUKTER (kilden) dersom ?pris= mangler i URL
+  // (f.eks. besøk via sitemap/Google/delt lenke), slik at kassa aldri bruker 0 kr.
+  const fastPris = parseInt(searchParams.get('pris') || '0') || (PRODUKTER.find(p => p.cjId === id)?.pris ?? 0);
   const margin = parseInt(searchParams.get('margin') || '15');
   const [produkt, setProdukt] = useState<any>(null);
   const [valgtVariant, setValgtVariant] = useState<any>(null);
