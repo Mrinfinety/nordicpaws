@@ -93,6 +93,21 @@ export const PRODUKTER: ProduktKonfig[] = [
     metaTittel: 'Stellesett til Katt & Hund – Servietter for Øre, Tenner & Øremidd',
     metaBeskrivelse: 'Komplett stellesett med engangsservietter til katt og hund: tannrens, ørepleie og øremiddfjerning. Trekkes over fingertuppen, fjerner ørevoks og plakk. Fri frakt over 499 kr.',
   },
+  {
+    cjId: '2089889522095173634',
+    navn: 'Ultralyd Antibjeff & Treningsenhet',
+    navnEn: 'Ultrasonic Anti-Bark & Training Device',
+    sub: 'Håndholdt, stopper bjeffing skånsomt',
+    subEn: 'Handheld, stops barking gently',
+    pris: 199,
+    margin: 139,
+    emoji: '🔇',
+    cat: 'hund',
+    beskrivelse: 'Bjeffer hunden mer enn du ønsker? Denne håndholdte antibjeff- og treningsenheten hjelper deg å korrigere uønsket atferd på en trygg og skånsom måte. Enheten sender ut en ultralyd som mennesker ikke hører, men som fanger hundens oppmerksomhet og bryter uvanen med overdreven bjeffing, hopping eller graving — helt uten straff eller ubehag. En antibjeff til hund som dette er perfekt både til egen hund og som en diskret måte å skape ro rundt nærgående eller aggressive hunder på tur. Den er kompakt, lett og passer lett i lomme, veske eller ryggsekk, slik at du alltid har den for hånden når det trengs. Med enkel ett-knapps betjening og innebygd lommelykt er den både praktisk og allsidig. Et effektivt hjelpemiddel for positiv trening og roligere hverdager — for både deg og naboene.',
+    beskrivelseEn: 'Does your dog bark more than you would like? This handheld anti-bark and training device helps you correct unwanted behaviour in a safe and gentle way. The device emits an ultrasonic sound that humans cannot hear, but which catches your dog\'s attention and breaks the habit of excessive barking, jumping or digging — without any punishment or discomfort. An anti-bark device like this is perfect both for your own dog and as a discreet way to keep calm around approaching or aggressive dogs on walks. It is compact, lightweight and fits easily in a pocket, bag or backpack, so you always have it on hand when needed. With simple one-button operation and a built-in flashlight, it is both practical and versatile. An effective aid for positive training and calmer days — for both you and the neighbours.',
+    metaTittel: 'Ultralyd Antibjeff til Hund – Håndholdt Treningsenhet',
+    metaBeskrivelse: 'Håndholdt ultralyd antibjeff og treningsenhet til hund. Stopper overdreven bjeffing skånsomt og trygt, uten straff. Kompakt med lommelykt. Fri frakt over 499 kr.',
+  },
 ];
 
 export function hentRelaterte(cjId: string) {
