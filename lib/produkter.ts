@@ -108,6 +108,21 @@ export const PRODUKTER: ProduktKonfig[] = [
     metaTittel: 'Ultralyd Antibjeff til Hund – Håndholdt Treningsenhet',
     metaBeskrivelse: 'Håndholdt ultralyd antibjeff og treningsenhet til hund. Stopper overdreven bjeffing skånsomt og trygt, uten straff. Kompakt med lommelykt. Fri frakt over 499 kr.',
   },
+  {
+    cjId: '2092181278277545985',
+    navn: 'Hevet Matstasjon i Tre',
+    navnEn: 'Raised Feeding Station Wooden',
+    sub: 'Doble skåler i stål, treholder',
+    subEn: 'Double stainless bowls, wooden holder',
+    pris: 359,
+    margin: 216,
+    emoji: '🍽️',
+    cat: 'hund',
+    beskrivelse: 'Gi hunden en sunnere og mer behagelig spiseopplevelse med denne hevede matstasjonen i tre. Den stilrene treholderen løfter maten opp til en naturlig høyde, slik at hunden slipper å bøye seg dypt ned mot gulvet under hvert måltid. En hevet matskål til hund avlaster nakke, rygg og ledd, fremmer bedre fordøyelse og gir en roligere måltidsstilling — spesielt godt for større raser og eldre hunder. Stasjonen leveres med to skåler i rustfritt stål som er hygieniske, slitesterke og enkle å ta ut og vaske. Skålene sitter trygt på plass i den solide trerammen, som med sitt varme, naturlige uttrykk passer like fint på kjøkkenet som i gangen. Slutt på skåler som sklir rundt på gulvet og søl overalt — dette er en praktisk og elegant løsning for både mat og vann. En liten oppgradering av spisekroken som gir hunden bedre komfort hver eneste dag.',
+    beskrivelseEn: 'Give your dog a healthier and more comfortable dining experience with this raised wooden feeding station. The stylish wooden holder lifts the food up to a natural height, so your dog no longer has to bend deep towards the floor during every meal. A raised feeding bowl for dogs relieves the neck, back and joints, promotes better digestion and encourages a calmer eating posture — especially good for larger breeds and older dogs. The station comes with two stainless steel bowls that are hygienic, durable and easy to lift out and wash. The bowls sit securely in the sturdy wooden frame, whose warm, natural look fits just as well in the kitchen as in the hallway. No more bowls sliding around on the floor and spills everywhere — this is a practical and elegant solution for both food and water. A small upgrade to the feeding corner that gives your dog better comfort every single day.',
+    metaTittel: 'Hevet Matstasjon til Hund – Doble Stålskåler i Treholder',
+    metaBeskrivelse: 'Hevet matstasjon til hund i tre med to skåler i rustfritt stål. Løfter maten til naturlig høyde, avlaster nakke og rygg og gir bedre fordøyelse. Fri frakt over 499 kr.',
+  },
 ];
 
 export function hentRelaterte(cjId: string) {
